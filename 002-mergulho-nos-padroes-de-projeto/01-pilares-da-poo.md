@@ -14,4 +14,4 @@
 - Polimorfismo
     - Vamos ver al­guns exem­plos de ani­mais. A mai­o­ria dos Animais podem pro­du­zir sons. Nós po­de­mos an­te­ci­par que todas as sub­clas­ses terão que so­bres­cre­ver o mé­todo base produzir Som para que cada sub­classe possa emi­tir o som cor­reto; por­tanto nós po­de­mos de­clará-lo abs­trato agora mesmo. Isso per­mite omi­tir qual­quer im­ple­men­ta­ção pa­drão do mé­todo na su­per­classe, mas força todas as sub­clas­ses a se vi­ra­rem com o que têm.
     - O Po­li­mor­fismo é a ha­bi­li­dade de um pro­grama de­tec­tar a classe real de um ob­jeto e cha­mar sua im­ple­men­ta­ção mesmo quando seu tipo real é des­co­nhe­cido no con­texto atual.”
-
+    - ![Polimorfismo](./polimorfismo.png)
