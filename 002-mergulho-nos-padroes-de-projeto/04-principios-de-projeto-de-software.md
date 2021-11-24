@@ -26,3 +26,18 @@
         3. Faça a classe que é uma de­pen­dên­cia im­ple­men­tar essa interface.
         4. Agora faça a se­gunda classe ser de­pen­dente dessa in­ter­face ao invés de fazer isso na classe con­creta. Você ainda pode fazê-la fun­ci­o­nar com ob­je­tos da classe ori­gi­nal, mas a co­ne­xão é agora muito mais flexível.”
         - ![Programar para interface](./programe_interface.png)
+    - Exemplo: simulador de empresa desenvolvedora de software
+        - ![Antes, Forte acoplamento](./forte_acoplamento.png)
+        - ![Melhor, polimorfismo](./polimorfismo_simplificou_codigo.png)
+        - ![Depois](./independencia_de_classes_concretas.png)
+        - Estendendo a classe empresa base não irá quebrar o código existente que já se baseia nela. A propósito, você acabou de ver um padrão de projeto ser colocado em ação! Este foi um exemplo do padrão Factory Method.
+
+- Prefira composição sobre herança
+    - “A he­rança é pro­va­vel­mente a ma­neira mais óbvia de reu­ti­li­zar có­digo entre clas­ses. Você tem duas clas­ses com o mesmo có­digo. Crie uma classe base comum para ambas essas duas clas­ses e mova o có­digo si­mi­lar para den­tro dela. Barbadinha!”
+    - Lista de problemas relacionados a herança:
+        - Você tem que implementar todos os métodos abstratos de classe mãe mesmo que você não os utilize.
+        - As subclasses estão firmemente acopladas as superclasses. Quaisquer mudanças em uma superclasse podem quebrar a funcionalidade das subclasses.
+    - Exemplo: “Ima­gine que você pre­cisa criar uma apli­ca­ção ca­tá­logo para um fa­bri­cante de car­ros. A em­presa fa­brica tanto car­ros como ca­mi­nhões; eles podem ser elé­tri­cos ou a ga­so­lina; todos os mo­de­los tem con­tro­les ma­nu­ais ou autopiloto.”
+        - ![Herança](./heranca.png)
+        - ![Composição](./composicao.png)
+        - Esta estrutura de classes lembra o padrão Strategy, que vamos tratar mais tarde neste livro.
