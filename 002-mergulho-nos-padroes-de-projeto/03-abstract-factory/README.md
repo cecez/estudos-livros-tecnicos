@@ -5,20 +5,20 @@
  - ![](./img1.png)
  - ![](./img2.png)
 
- - "Ge­ral­mente, o pro­grama cria um ob­jeto fá­brica con­creto no es­tá­gio de ini­ci­a­li­za­ção. Antes disso, o pro­grama deve se­le­ci­o­nar o tipo de fá­brica de­pen­dendo da con­fi­gu­ra­ção ou de­fi­ni­ções de ambiente."
+ - "Geralmente, o programa cria um objeto fábrica concreto no estágio de inicialização. Antes disso, o programa deve selecionar o tipo de fábrica dependendo da configuração ou definições de ambiente."
 
  - Estrutura
     - ![](./img3.png)
-    - 1. “Pro­du­tos Abs­tra­tos de­cla­ram in­ter­fa­ces para um con­junto de pro­du­tos dis­tin­tos mas re­la­ci­o­na­dos que fazem parte de uma fa­mí­lia de produtos.
-    - 2. Pro­du­tos Con­cre­tos são vá­rias im­ple­men­ta­ções de pro­du­tos abs­tra­tos, agru­pa­dos por va­ri­an­tes. Cada pro­duto abs­trato (ca­deira/sofá) deve ser im­ple­men­tado em todas as va­ri­an­tes dadas (Vi­to­ri­ano/Mo­derno).
-    - 3. A in­ter­face Fá­brica Abs­trata de­clara um con­junto de mé­to­dos para cri­a­ção de cada um dos pro­du­tos abstratos.
-    - 4. Fá­bri­cas Con­cre­tas im­ple­men­tam mé­to­dos de cri­a­ção fá­brica abs­tra­tos. Cada fá­brica con­creta cor­res­ponde a uma va­ri­ante es­pe­cí­fica de pro­du­tos e cria ape­nas aque­las va­ri­an­tes de produto.
-    - 5. Em­bora fá­bri­cas con­cre­tas ins­tan­ciam pro­du­tos con­cre­tos, as­si­na­tu­ras dos seus mé­to­dos de cri­a­ção devem re­tor­nar pro­du­tos abs­tra­tos cor­res­pon­den­tes. Dessa forma o có­digo cli­ente que usa uma fá­brica não fica li­gada a va­ri­ante es­pe­cí­fica do pro­duto que ele pegou de uma fá­brica. O Cli­ente pode tra­ba­lhar com qual­quer va­ri­ante de pro­duto/fá­brica con­creto, desde que ele se co­mu­ni­que com seus ob­je­tos via in­ter­fa­ces abstratas.”
+    - 1. “Produtos Abstratos declaram interfaces para um conjunto de produtos distintos mas relacionados que fazem parte de uma família de produtos.
+    - 2. Produtos Concretos são várias implementações de produtos abstratos, agrupados por variantes. Cada produto abstrato (cadeira/sofá) deve ser implementado em todas as variantes dadas (Vitoriano/Moderno).
+    - 3. A interface Fábrica Abstrata declara um conjunto de métodos para criação de cada um dos produtos abstratos.
+    - 4. Fábricas Concretas implementam métodos de criação fábrica abstratos. Cada fábrica concreta corresponde a uma variante específica de produtos e cria apenas aquelas variantes de produto.
+    - 5. Embora fábricas concretas instanciam produtos concretos, assinaturas dos seus métodos de criação devem retornar produtos abstratos correspondentes. Dessa forma o código cliente que usa uma fábrica não fica ligada a variante específica do produto que ele pegou de uma fábrica. O Cliente pode trabalhar com qualquer variante de produto/fábrica concreto, desde que ele se comunique com seus objetos via interfaces abstratas.”
 
 - Pseudocódigo
     - ![](./img4.png)
-    - Com essa abor­da­gem, o có­digo cli­ente não de­pende de clas­ses con­cre­tas de fá­bri­cas e ele­men­tos UI desde que ele tra­ba­lhe com esses ob­je­tos atra­vés de suas in­ter­fa­ces abs­tra­tas. Isso tam­bém per­mite que o có­digo do cli­ente su­porte ou­tras fá­bri­cas ou ele­men­tos UI que você possa adi­ci­o­nar no futuro.
-    - Como re­sul­tado, você não pre­cisa mo­di­fi­car o có­digo do cli­ente cada vez que adi­ci­o­nar uma va­ri­a­ção de ele­men­tos de UI em sua apli­ca­ção. Você só pre­cisa criar uma nova classe fá­brica que pro­duza esses ele­men­tos e mo­di­fi­car de forma sutil o có­digo de ini­ci­a­li­za­ção da apli­ca­ção de forma que ele se­le­ci­one aquela classe quando apropriado.
+    - Com essa abordagem, o código cliente não depende de classes concretas de fábricas e elementos UI desde que ele trabalhe com esses objetos através de suas interfaces abstratas. Isso também permite que o código do cliente suporte outras fábricas ou elementos UI que você possa adicionar no futuro.
+    - Como resultado, você não precisa modificar o código do cliente cada vez que adicionar uma variação de elementos de UI em sua aplicação. Você só precisa criar uma nova classe fábrica que produza esses elementos e modificar de forma sutil o código de inicialização da aplicação de forma que ele selecione aquela classe quando apropriado.
 
 
 Trechos de
